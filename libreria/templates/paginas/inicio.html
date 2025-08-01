@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block titulo %} INSPECTOR MORSE {% endblock %}
+
+{% block contenido %} 
+
+
+<div class="card " >
+
+    <main role="main" class="container">
+        
+      <div class="row ">
+
+        <div class="col-md-5 ">
+          <div class="mt-4 p-4 text-white rounded">
+            <div class="col-md-10 px-0">
+              <div align="left">
+                {% load static %}        
+                <img src="{% static "img/Inspector_Morse-logo.svg.png" %}" width="100%" float="right" srcset="">
+                <img src="{% static "img/Morse-Inicio-removebg-preview.png" %}" width="100%" float="right" srcset="">
+              </div>
+            </div>
+          </div>
+          </br>
+        </div>
+
+    
+        <div class="col-md-5 ">
+            <div class="p-4">
+              <ol class="list-unstyled">
+              
+                  <a href="{% url 'resenia_Capitulo' 1 %}">CAPITULO 1</a>
+                  </br>
+                  <a href="{% url 'resenia_Capitulo' 2 %}">CAPITULO 2</a>
+                  </br>
+                  <a href="{% url 'resenia_Capitulo' 3 %}">CAPITULO 3</a>
+                </ol>
+            </div>
+        </div>
+
+        <div class="col-md-2 bg-info">
+        </br>
+        </br>
+            <div class="col-md-auto">
+
+
+            </div>
+        </div>
+    
+      </div>
+  
+      <!--
+      </br>
+      <div class="card-body bg-light text-black rounded">
+        <h4 class="card-title " align="center">Top capítulos</h4>
+        <div class="container  " align="center">
+         </div>
+      </div>
+      </br>
+      -->
+  
+    </main>
+    
+</div> 
+  
+{% endblock %}
