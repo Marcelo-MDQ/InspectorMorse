@@ -24,13 +24,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-(!m1(#qsrm86(qzsi$owwqsnqyj_ovzp*rhw7uygzvon8vf1!q'
 
 # SECURITY WARNING: don't run with debug turned on in production!#DEBUG = True
-DEBUG = True
+#DEBUG = True
 #ALLOWED_HOSTS = ['localhost'] -- raro ahora no funciona
-ALLOWED_HOSTS = ['127.0.0.1']
+#ALLOWED_HOSTS = ['127.0.0.1']
 
 # en produccion western
-#DEBUG = False
-#ALLOWED_HOSTS = ['inspectormorse.pythonanywhere.com']
+DEBUG = False
+ALLOWED_HOSTS = ['inspectormorse.pythonanywhere.com']
 
 # Application definition
 
@@ -94,29 +94,29 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 # base del sitio western.pythonanywhere.com
-#DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.mysql',
-#        'NAME': 'inspectormorse$inspectormorse',
-#        'USER': 'inspectormorse',
-#        'PASSWORD': 'Romeo1368',
-#       'HOST': 'inspectormorse.mysql.pythonanywhere-services.com',
-#    }
-#}
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'inspectormorse$inspectormorse',
+        'USER': 'inspectormorse',
+        'PASSWORD': 'Romeo1368',
+       'HOST': 'inspectormorse.mysql.pythonanywhere-services.com',
+    }
+}
 
-DATABASES = {  
-  'default': {  
-     'ENGINE': 'django.db.backends.mysql',  
-     'NAME': 'inspectormorse',  
-     'USER': 'root',
-     'PASSWORD': '',
-     'HOST': 'localhost',
-     'PORT': 3306,
-     'OPTIONS': {
-       'sql_mode': 'traditional',
-        }
-   }  
- }
+#DATABASES = {  
+#  'default': {  
+#     'ENGINE': 'django.db.backends.mysql',  
+#     'NAME': 'inspectormorse',  
+#     'USER': 'root',
+#     'PASSWORD': '',
+#     'HOST': 'localhost',
+#     'PORT': 3306,
+#     'OPTIONS': {
+#       'sql_mode': 'traditional',
+#        }
+#   }  
+# }
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/

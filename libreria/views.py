@@ -19,3 +19,9 @@ def reseniaCapitulo(request, id):
         'invitados': invitados,
         })
 
+def capitulos(request):
+    capitulos = Capitulo.objects.all().order_by('id_capitulo')
+    cantidad = len(capitulos)
+    print(cantidad)
+    return render(request, 'paginas/capitulos.html', {'capitulos': capitulos, 'cantidad': cantidad})
+    
